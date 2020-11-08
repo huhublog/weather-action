@@ -22,7 +22,7 @@ jobs:
       - name: 'Get Date'
         run: echo "::set-env name=REPORT_DATE::$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')"
       - name: 'Send mail'
-        uses: dawidd6/action-send-mail@master
+        uses: huhublog/action-send-mail@master
         with:
           server_address: hwhzsmtp.qiye.163.com
           server_port: 994
