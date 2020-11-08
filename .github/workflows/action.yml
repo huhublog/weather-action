@@ -1,9 +1,15 @@
 name: 'GitHub Actions Weather Bot'
-
 on:
+  repository_dispatch:
+  release:
+    types: published
   push:
+    branches:
+      - master
   schedule:
-    - cron: '0 21 * * *'
+    - cron: 0 0 * * *
+  watch:
+    types: started
 
 jobs:
   bot:
@@ -22,8 +28,8 @@ jobs:
           server_port: 465
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: Shanghai Weather Report (${{env.REPORT_DATE}})
+          subject: Chengdu Shuangliu Weather Report (${{env.REPORT_DATE}})
           body: file://result.html
-          to: yifeng.ruan@gmail.com
+          to: 664140393@qq.com
           from: GitHub Actions
           content_type: text/html
