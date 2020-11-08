@@ -31,5 +31,5 @@ jobs:
           subject: Hi, Weather Report Coming!
           body: file://result.html
           to: ${{ secrets.TARGET_EMAIL }}
-          from: huhuhub.github.io
+          from: huhu.shi
           content_type: text/html
