@@ -28,8 +28,8 @@ jobs:
           server_port: 994
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: Weather Report
+          subject: Hi, Weather Report Coming!
           body: file://result.html
-          to: 664140393@qq.com,huhu.shi@hand-china.com
-          from: huhu.shi
+          to: ${{ secrets.TARGET_EMAIL }}
+          from: huhuhub.github.io
           content_type: text/html
