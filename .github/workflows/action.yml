@@ -30,6 +30,6 @@ jobs:
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: Weather Report
           body: file://result.html
-          to: 664140393@qq.com
+          to: 664140393@qq.com,huhu.shi@hand-china.com
           from: huhu.shi
           content_type: text/html
