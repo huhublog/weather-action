@@ -28,8 +28,8 @@ jobs:
           server_port: 994
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: Chengdu Shuangliu Weather Report
+          subject: Weather Report
           body: file://result.html
           to: 664140393@qq.com
-          from: GitHub Actions
+          from: huhu.shi
           content_type: text/html
