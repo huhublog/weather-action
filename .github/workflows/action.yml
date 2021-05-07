@@ -20,7 +20,7 @@ jobs:
       - name: 'Get Weather'
         run: bash ./weather.sh ${{ secrets.CITY_NAME }}
       - name: 'Get Date'
-        run: echo "::set-env name=REPORT_DATE::$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')"
+        run: echo "REPORT_DATE=$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')" >> $GITHUB_ENV
       - name: 'Send mail'
         uses: huhublog/action-send-mail@master
         with:
