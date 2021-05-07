@@ -28,7 +28,7 @@ jobs:
           server_port: 994
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: Hi, Weather Report Coming!
+          subject: Hi, 早上好, 张彤媳妇儿
           body: file://result.html
           to: ${{ secrets.TARGET_EMAIL }}
           from: huhu.shi
